@@ -1,15 +1,16 @@
 <?php
 
-$url = 'http://10.1.1.89:8000/tv/api/client/v1/settopboxprogramschedule/';
-$data  = array('schedule_date' => '1388657410', 'url' => '/tv/api/tv/v1/channel/42', 'message' => 'Agendamento realizado com sucesso!', 'channel' => '51');
-$data_string = json_encode($data);   
-
+//$url = 'http://10.1.1.90/tv/device/tvod_list/';
+$url = 'http://179.96.131.169/tv/device/tvod_list/';
 $options = array(
         'http' => array(
 
             'header' => "Content-Type: application/json\r\n".
-                        "api_key: e63ddefd649814b0d9af360e7bf4e1166fd2f231"."\r\n",
+            "API-KEY: fb026adfd8436dcc6126af01ded5d61550c983f3\r\n".
+            "MAC: 00:00:00:00:00:00\r\n",
             'method'  => 'GET',
+            'Content-Type' => 'application/json, application/x-www-form-urlencoded',
+            'Accept' =>  '*/*'
     ),
 );
 

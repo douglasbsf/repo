@@ -1,15 +1,16 @@
 var request = require('request');
 
 var options = {
-    uri: 'http://10.1.1.89:8000/tv/api/client/v1/settopboxprogramschedule/',
+    uri: 'http://10.1.1.90/tv/device/tvod_list/',
     method: 'GET',
     headers: {
-        "api_key" : "e63ddefd649814b0d9af360e7bf4e1166fd2f231"
+        "API-KEY" : "df4df757327fcfd94abf51887bd22b86581a8680",
           } 
 
 };
 
 request(options, function (error, response, body) {
+    console.dir(response) 
     if (!error && response.statusCode == 200) {
         console.dir(response) 
     }
